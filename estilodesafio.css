@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'idroid';
+    src: url('./idroid.otf') format('opentype'); /* . página atual, .. página anterior */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor1: rgb(199, 252, 215);
+    --cor2: rgb(99, 219, 99);
+    --cor3: rgb(17, 175, 17);
+    --cor4: rgb(0, 128, 0);
+    --cor5: rgb(2, 85, 2);
+
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte-decorativa: 'idroid', cursive;
+}
+
+body {    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+header {
+    background-image: linear-gradient(180deg, var(--cor3), rgb(0, 0, 0));
+    min-height: 150px;
+}
+
+header > p.subtitle {
+    max-width: 600px;
+    font-weight: lighter;
+    color: rgb(209, 209, 209);
+    margin: auto;
+    padding: 3px 10px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.432);
+}
+
+nav {
+    height: 30px;
+    margin-top: 7px;
+}
+
+nav > span {
+    height: 30px;
+}
+
+nav > span > a {
+    color: rgb(99, 219, 99);
+    text-decoration: none;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: small;
+    margin: 0px 10px;
+    transition-duration: 0.5s;
+    border-radius: 8px;
+}
+
+a.externo::after {
+    content: '\F4CE';
+}
+
+nav > span > a:hover {
+    color: rgb(2, 85, 2);
+    background-color: rgb(99, 219, 99);
+}
+
+h1 {
+    margin: 0px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.425);
+}
+
+p {
+    color: white;
+    text-align: center;
+    padding: 0px 5px;
+    width: fit-content;
+}
+
+main {
+    margin: auto;
+    min-width: 320px;
+    max-width: 1050px;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
+
+img#irina {
+    box-shadow: 0px 0px 4px black;
+}
+
+main > article {
+    margin: 0 50px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 3px rgb(0 0 0 / 23%);
+    margin-bottom: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+main > article > p {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    padding: 5px 5px;
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+strong {
+    color: green;
+}
+
+main > article > h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'idroid', cursive;    
+    padding-left: 10px;
+} 
+
+main > article > h3 {
+    background-image: linear-gradient(90deg, rgb(99, 219, 99), transparent);
+    font-family: 'idroid', cursive;
+    padding-left: 10px;
+}
+
+main > article > img.pequena {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+main > article > p >  a {
+    background-color: rgba(128, 228, 128, 0.808);
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main > article > p >  a:hover {
+    text-decoration: underline;
+}
+
+main > article > picture {
+    align-self: center;
+}
+
+main > article > div.video {
+    background-color: green;
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 55%;
+    position: relative;
+}
+
+
+div.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main > article > aside {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: rgb(85, 185, 85);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.534);
+}
+
+main > article > aside > h1#extra {
+    margin: 0px;
+    font-size: 25px;
+    text-align: left;
+    background-color: rgb(3, 146, 74);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-indent: 20px;
+
+}
+
+main > article > aside > p {
+    color: black;
+    text-indent: 10px;
+}
+
+main > article > aside > p >  a {
+    background-color: rgba(128, 228, 128, 0.808);
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main > article > aside > p >  a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-position: inside;
+    columns: 2;
+    padding-left: 10px;
+    margin: 10px 0px;
+    list-style-type: '\2714';
+    text-indent: 20px;
+}
+
+footer > div {
+    background-color: var(--cor5);
+}
+
+footer > div > p {
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    ul {
+        columns: 1;
+    }
+
+    div.video {
+        box-shadow: inset 3px 3px 13px 0px rgba(0, 0, 0, 0.529);
+    }
+}
